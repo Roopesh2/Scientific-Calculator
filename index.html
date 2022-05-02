@@ -1,0 +1,53 @@
+<!--Version 7.0-->
+<!--Updates
+-) Now you can directly add degree in trigonometric functions(with symbol "°")
+ -->
+ <!--
+ manual
+
+-) Rest - clearing output screen (disp & disp2)
+-) rem - to get the reminder when divclassing x to y
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scientific calculator</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+	<div class="container">
+		<div id="disp" autocomplete="off" oninput=""><span id="c"></span></div>
+		<div id="disp2"></div>
+		<div class="button" onclick="insertParen()"><p>(</p></div><!--
+		 --><div class="button" onmousedown="startCount(moveToBeginning)" onmouseup="endCount()" onclick="moveToLeft()"><p>&lt;</p></div><!--
+		 --><div class="button" onmousedown="startCount(moveToEnd)" onmouseup="endCount()" onclick="moveToRight()"><p>&gt;</p></div><!--
+		 --><div class="button" onmousedown="startCount(clearInput, 1000)" onmouseup="endCount()" onclick="backspace()"><p><img src="./backspace_18dp.png" width="32"></p></div><!--
+		 --><div class="button left" onclick="clearInput()"><p>C</p></div><!--
+		 --><div class="button" onclick="addToInput(7)"><p>7</p></div><!--
+		 --><div class="button" onclick="addToInput(8)"><p>8</p></div><!--
+		 --><div class="button" onclick="addToInput(9)"><p>9</p></div><!--
+		 --><div class="button" onclick="addOperator('+')"><p>+</p></div><!--
+		 --><div class="button left" onclick=""><p>ƒ</p></div><!--
+		 --><div class="button" onclick="addToInput(4)"><p>4</p></div><!--
+		 --><div class="button" onclick="addToInput(5)"><p>5</p></div><!--
+		 --><div class="button" onclick="addToInput(6)"><p>6</p></div><!--
+		 --><div class="button" onclick="addOperator('-')"><p>-</p></div><!--
+		 --><div class="button left" onclick=""><p>π</p></div><!--
+		 --><div class="button" onclick="addToInput(1)"><p>1</p></div><!--
+		 --><div class="button" onclick="addToInput(2)"><p>2</p></div><!--
+		 --><div class="button" onclick="addToInput(3)"><p>3</p></div><!--
+		 --><div class="button" onclick="addOperator('×')"><p>×</p></div><!--
+		 --><div class="button left" onclick="addToInput('Ans')"><p>Ans</p></div><!--
+		 --><div class="button" onclick="addToInput(')')"><p>)</p></div><!--
+		 --><div class="button" onclick="addToInput(0)"><p>0</p></div><!--
+		 --><div class="button" onclick="addToInput('.')"><p>.</p></div><!--
+		 --><div class="button" onclick="addOperator('÷')"><p>÷</p></div><!--
+		 --><div class="button left" onclick="solve(1)"><p>=</p></div>
+	 </div>
+ </div>
+<script type="text/javascript" src="./KeyEventListener.js"></script>
+<script type="text/javascript" src="./functions.js"></script>
+<script type="text/javascript" src="./shunting-yard.js"></script>
+<script type="text/javascript" src="./Evaluvator.js"></script>
+</body>
+</html>
